@@ -1932,10 +1932,10 @@ def doprediction(XcropFP,YcropFP,clf,model,append2Xall=True):
         except:
             pdb.set_trace()
         try:
-            np.savez('NewFPcropped_'+str(kkk)+'.npz',XcropFP=XcropFP,YcropFP=YcropFP)
+            np.savez('NewFPcropped_'+str(kkk*np.random.randint(10)+np.random.randint(1000))+'.npz',XcropFP=XcropFP,YcropFP=YcropFP)
         except:
             try:
-                np.savez('NewFPcropped'+str(np.random.randint(10000))+'.npz',XcropFP=XcropFP,YcropFP=YcropFP)
+                np.savez('NewFPcropped'+str(np.random.randint(10000)+np.random.randint(100))+'.npz',XcropFP=XcropFP,YcropFP=YcropFP)
             except:
                 pass
             
